@@ -1,0 +1,17 @@
+package:
+  name: conda-link
+  version: 0.0.1
+
+source:
+  path: ..
+
+build:
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  entry_points:
+    - conda-link = conda_link.conda_link:main
+
+requirements:
+  host:
+    - python
+  run:
+    - python

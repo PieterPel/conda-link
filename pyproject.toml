@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conda_link"
+version = "0.0.1"
+description = "Conda link CLI"
+
+[project.scripts]
+conda-link = "conda_link.conda_link:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
